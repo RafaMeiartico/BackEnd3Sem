@@ -1,0 +1,13 @@
+﻿using FIlmesMoura.WebAPI.Models;
+
+namespace FIlmesMoura.WebAPI.Interface;
+
+public interface IFilmeRepository
+{
+    Filme BuscarPorId(Guid Id);
+    List<Filme> Listar();
+    void Cadastrar(Filme novoFilme);
+    void Deletar(Guid Id);
+    void AtualizarIdCorpo(Filme filmeAtualizado);
+    void AtualizarIdUrl(Guid Id, Filme filmeAtualizado);
+}

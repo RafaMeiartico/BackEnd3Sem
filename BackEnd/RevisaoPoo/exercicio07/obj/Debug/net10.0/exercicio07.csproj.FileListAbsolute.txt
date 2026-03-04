@@ -1,0 +1,15 @@
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\bin\Debug\net10.0\exercicio07.exe
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\bin\Debug\net10.0\exercicio07.deps.json
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\bin\Debug\net10.0\exercicio07.runtimeconfig.json
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\bin\Debug\net10.0\exercicio07.dll
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\bin\Debug\net10.0\exercicio07.pdb
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\obj\Debug\net10.0\exercicio07.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\obj\Debug\net10.0\exercicio07.AssemblyInfoInputs.cache
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\obj\Debug\net10.0\exercicio07.AssemblyInfo.cs
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\obj\Debug\net10.0\exercicio07.csproj.CoreCompileInputs.cache
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\obj\Debug\net10.0\exercicio07.sourcelink.json
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\obj\Debug\net10.0\exercicio07.dll
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\obj\Debug\net10.0\refint\exercicio07.dll
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\obj\Debug\net10.0\exercicio07.pdb
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\obj\Debug\net10.0\exercicio07.genruntimeconfig.cache
+C:\Users\53961007888\Desktop\BackEnd3Sem\RevisaoPoo\exercicio07\obj\Debug\net10.0\ref\exercicio07.dll
