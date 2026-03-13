@@ -12,6 +12,10 @@ builder.Services.AddDbContext<EventContext>(options => options.UseSqlServer(buil
 
 //2. Registrar as Repositories (Injeção da Dependencia)
 builder.Services.AddScoped<ITipoEventoRepository, TipoEventoRepository>();
+builder.Services.AddScoped<ITipoUsuarioRepository, TipoUsuarioRepository>();
+builder.Services.AddScoped<IInstituicaoRepository, InstituicaoRepository>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+
 
 // Adiciona Swagger
 builder.Services.AddEndpointsApiExplorer();

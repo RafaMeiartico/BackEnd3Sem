@@ -73,7 +73,7 @@ public class TipoUsuarioRepository : ITipoUsuarioRepository
     /// <summary>
     /// Busca o nome de um usuário
     /// </summary>
-    /// <returns>Lista de Institui'~oes</returns>
+    /// <returns>Lista de Instituiçoes</returns>
     public List<TipoUsuario> Listar()
     {
         return _context.TipoUsuarios

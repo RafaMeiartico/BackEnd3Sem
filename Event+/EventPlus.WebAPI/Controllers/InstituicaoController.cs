@@ -34,6 +34,8 @@ public class InstituicaoController : ControllerBase
     }
 
 
+
+
     [HttpGet("{id}")] //get por id
     public IActionResult BuscarPorId(Guid id)
     {
@@ -58,11 +60,13 @@ public class InstituicaoController : ControllerBase
         {
             var novaInstituicao = new Instituicao
             {
-                 NomeFantasia = instituicao.Titulo!
+                 NomeFantasia = instituicao.NomeFantasia!,
+                 Cnpj = instituicao.Cnpj!,
+                 Endereco = instituicao.Endereco!
             };
 
             _instituicaoRepository.Cadastrar(novaInstituicao);
-            return StatusCode(201, Instituicao);
+            return StatusCode(201, instituicao);
 
         }
         catch (Exception erro)
@@ -70,6 +74,9 @@ public class InstituicaoController : ControllerBase
             return BadRequest(erro.Message);
         }
     }
+
+
+
 
 
     [HttpPut("{id}")]
@@ -80,10 +87,12 @@ public class InstituicaoController : ControllerBase
         {
             var InstituicaoAtualizada = new Instituicao
             {
-                NomeFantasia = instituicao.NomeFantasia!
+                NomeFantasia = instituicao.NomeFantasia!,
+                Endereco = instituicao.Endereco!,
+                Cnpj = instituicao.Cnpj!
             };
 
-            _instituicaoRepository.Atualizar(id, InstituicaoAtualizada)
+            _instituicaoRepository.Atualizar(id, InstituicaoAtualizada);
 
             return StatusCode(204, instituicao);
 
@@ -92,9 +101,26 @@ public class InstituicaoController : ControllerBase
         {
             return BadRequest(erro.Message);
         }
+    }
 
-        []
-    
+
+
+
+
+    [HttpDelete("{id}")]
+    public IActionResult Delete(Guid id)
+    {
+        try
+        {
+            _instituicaoRepository.Deletar(id);
+
+            return NoContent();
+        }
+        catch (Exception erro)
+        {
+
+            return BadRequest(erro.Message);
+        }
     }
 
 }
