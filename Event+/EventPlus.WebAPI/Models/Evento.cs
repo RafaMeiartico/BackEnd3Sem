@@ -24,13 +24,12 @@ public partial class Evento
 
     public Guid? IdTipoEvento { get; set; }
 
-    public Guid? IdInstituicao { get; set; }
+    public Guid? IdInstituicao { get; set; } //aqui oh
 
     [JsonIgnore]
     [InverseProperty("IdEventoNavigation")]
     public virtual ICollection<ComentarioEvento> ComentarioEventos { get; set; } = new List<ComentarioEvento>();
 
-    [JsonIgnore]
     [ForeignKey("IdInstituicao")]
     [InverseProperty("Eventos")]
     public virtual Instituicao? IdInstituicaoNavigation { get; set; }

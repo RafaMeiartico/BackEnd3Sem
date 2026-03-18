@@ -15,6 +15,166 @@
     "version": "v1"
   },
   "paths": {
+    "/api/Evento/Usuario/{idUsuario}": {
+      "get": {
+        "tags": [
+          "Evento"
+        ],
+        "parameters": [
+          {
+            "name": "idUsuario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Evento": {
+      "get": {
+        "tags": [
+          "Evento"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Evento"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EventoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Evento/{id}": {
+      "get": {
+        "tags": [
+          "Evento"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Evento"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Evento"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Evento"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Evento"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Evento"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Evento/ListarProximos": {
+      "get": {
+        "tags": [
+          "Evento"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Instituicao": {
       "get": {
         "tags": [
@@ -133,6 +293,37 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Login": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -447,45 +638,6 @@
   },
   "components": {
     "schemas": {
-      "ComentarioEvento": {
-        "type": "object",
-        "properties": {
-          "idComentarioEvento": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "dataComentarioEvento": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "descricao": {
-            "maxLength": 200,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "exibe": {
-            "type": "boolean"
-          },
-          "idEvento": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "idUsuario": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "idEventoNavigation": {
-            "$ref": "#/components/schemas/Evento"
-          },
-          "idUsuarioNavigation": {
-            "$ref": "#/components/schemas/Usuario"
-          }
-        },
-        "additionalProperties": false
-      },
       "Evento": {
         "type": "object",
         "properties": {
@@ -517,8 +669,49 @@
             "format": "uuid",
             "nullable": true
           },
+          "idInstituicaoNavigation": {
+            "$ref": "#/components/schemas/Instituicao"
+          },
           "idTipoEventoNavigation": {
             "$ref": "#/components/schemas/TipoEvento"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EventoDTO": {
+        "required": [
+          "dataEvento",
+          "descricao",
+          "idEvento",
+          "idInstituicao",
+          "idTipoEvento",
+          "nome"
+        ],
+        "type": "object",
+        "properties": {
+          "descricao": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "nome": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "dataEvento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idEvento": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "idTipoEvento": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "idInstituicao": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         "additionalProperties": false
@@ -574,31 +767,20 @@
         },
         "additionalProperties": false
       },
-      "Presenca": {
+      "LoginDTO": {
+        "required": [
+          "email",
+          "senha"
+        ],
         "type": "object",
         "properties": {
-          "idPresenca": {
-            "type": "string",
-            "format": "uuid"
+          "email": {
+            "minLength": 1,
+            "type": "string"
           },
-          "situacao": {
-            "type": "boolean"
-          },
-          "idEvento": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "idUsuario": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "idEventoNavigation": {
-            "$ref": "#/components/schemas/Evento"
-          },
-          "idUsuarioNavigation": {
-            "$ref": "#/components/schemas/Usuario"
+          "senha": {
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -614,13 +796,6 @@
             "maxLength": 100,
             "minLength": 0,
             "type": "string",
-            "nullable": true
-          },
-          "eventos": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Evento"
-            },
             "nullable": true
           }
         },
@@ -651,13 +826,6 @@
             "minLength": 0,
             "type": "string",
             "nullable": true
-          },
-          "usuarios": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Usuario"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -671,56 +839,6 @@
           "titulo": {
             "minLength": 1,
             "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Usuario": {
-        "type": "object",
-        "properties": {
-          "idUsuario": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "nome": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "maxLength": 256,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "senha": {
-            "maxLength": 60,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "idTipoUsuario": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "comentarioEventos": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ComentarioEvento"
-            },
-            "nullable": true
-          },
-          "idTipoUsuarioNavigation": {
-            "$ref": "#/components/schemas/TipoUsuario"
-          },
-          "presencas": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Presenca"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -769,7 +887,13 @@
   ],
   "tags": [
     {
+      "name": "Evento"
+    },
+    {
       "name": "Instituicao"
+    },
+    {
+      "name": "Login"
     },
     {
       "name": "TipoEvento"

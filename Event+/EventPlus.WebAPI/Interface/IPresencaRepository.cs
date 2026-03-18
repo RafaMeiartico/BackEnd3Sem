@@ -4,7 +4,7 @@ namespace EventPlus.WebAPI.Interface;
 
 public interface IPresencaRepository
 {
-    void Cadastrar(Presenca presenca);
+    void Inscrever(Presenca presenca);
     void Deletar(Guid id);
     List<Presenca> Listar();
     Presenca BuscarPorId(Guid id);

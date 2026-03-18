@@ -20,6 +20,7 @@ public class TipoEventoController : ControllerBase
     }
 
 
+
     /// <summary>
     /// Endpoint da API faz a chamada para o método de lista os tipos de evento
     /// </summary>
@@ -39,12 +40,13 @@ public class TipoEventoController : ControllerBase
     }
 
 
+
     /// <summary>
     /// Endpoint da API que faz a chamada para o método de buscar um tipo de evento específico
     /// </summary>
     /// <param name="id">Id do tipo de evento buscado</param>
     /// <returns>Status code 200 e o tipo de evento buscado</returns>
-    [HttpGet("{id}")] //get por id
+    [HttpGet("{id}")]
 
     public IActionResult BuscarPorId(Guid id) 
     {
