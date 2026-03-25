@@ -56,8 +56,7 @@
               "ViewState": "AgIAALUAAAAAAAAAAADwvywAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-20T17:21:35.105Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -69,8 +68,7 @@
               "RelativeToolTip": "Repositories\\ComentarioEventoRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T13:16:17.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T13:16:17.762Z"
             },
             {
               "$type": "Document",
@@ -92,7 +90,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\53961007888\\Desktop\\BackEnd3Sem\\Event\u002B\\EventPlus.WebAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAuwEYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-20T11:46:06.995Z",
               "EditorCaption": ""
