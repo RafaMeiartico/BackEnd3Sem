@@ -162,3 +162,4 @@ C:\Users\53961007888\Desktop\BackEnd3Sem\Event+\EventPlus.WebAPI\bin\Debug\net10
 C:\Users\53961007888\Desktop\BackEnd3Sem\Event+\EventPlus.WebAPI\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\53961007888\Desktop\BackEnd3Sem\Event+\EventPlus.WebAPI\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\53961007888\Desktop\BackEnd3Sem\Event+\EventPlus.WebAPI\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\53961007888\Desktop\BackEnd3Sem\Event+\EventPlus.WebAPI\bin\Debug\net10.0\Azure.AI.ContentSafety.dll

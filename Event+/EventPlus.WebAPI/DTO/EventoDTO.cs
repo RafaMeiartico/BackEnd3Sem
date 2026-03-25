@@ -12,19 +12,15 @@ public class EventoDTO
     public string? Nome { get; set; }
 
 
-    [Required(ErrorMessage = "O nome do evento é obrigatório!")]
+    [Required(ErrorMessage = "A data do evento é obrigatório!")]
     public DateTime DataEvento { get; set; }
 
 
-    [Required(ErrorMessage = "O nome do evento é obrigatório!")]
-    public Guid IdEvento { get; set; }
-
-
-    [Required(ErrorMessage = "O nome do evento é obrigatório!")]
+    [Required(ErrorMessage = "O tipo do evento é obrigatório!")]
     public Guid IdTipoEvento { get; set; }
 
 
-    [Required(ErrorMessage = "O nome do evento é obrigatório!")]
+    [Required(ErrorMessage = "O Instituição do evento é obrigatório!")]
     public Guid IdInstituicao { get; set; }
 
 }

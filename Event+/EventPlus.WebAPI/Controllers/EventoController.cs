@@ -115,7 +115,6 @@ public class EventoController : ControllerBase
                 Descricao = Evento.Descricao!,
                 Nome = Evento.Nome!,
                 DataEvento = Evento.DataEvento!,
-                IdEvento = Evento.IdEvento!,
                 IdInstituicao = Evento.IdInstituicao!,
                 IdTipoEvento = Evento.IdTipoEvento
             };

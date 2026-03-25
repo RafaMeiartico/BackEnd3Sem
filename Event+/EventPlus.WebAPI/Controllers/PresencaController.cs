@@ -117,20 +117,13 @@ public class PresencaController : ControllerBase
     /// <param name="tipoEvento">Presença com dados atualizados</param>
     /// <returns>Status Code 204 e a presença atualizada</returns>
     [HttpPut("{id}")]
-    public IActionResult Atualizar(Guid id, Presenca presenca)
+    public IActionResult Atualizar(Guid id)
     {
         try
         {
-            var presencaAtualizada = new Presenca
-            {
-                Situacao = presenca.Situacao!,
-                IdEvento = presenca.IdEvento!,
-                IdUsuario = presenca.IdUsuario!
-            };
+            _presencaRepository.Atualizar(id);
 
-            _presencaRepository.Atualizar(id, presencaAtualizada);
-
-            return StatusCode(204, presenca);
+            return StatusCode(204);
         }
         catch (Exception erro)
         {

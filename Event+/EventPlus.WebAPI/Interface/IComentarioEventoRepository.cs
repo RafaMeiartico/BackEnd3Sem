@@ -8,7 +8,7 @@ public interface IComentarioEventoRepository
 
     void Deletar(Guid IdComentarioEvento);
 
-    List<ComentarioEvento> List(Guid IdEvento);
+    List<ComentarioEvento> Listar(Guid IdEvento);
     ComentarioEvento BuscarPorIdUsuario(Guid IdUsuario, Guid IdEvento);
 
     List<ComentarioEvento> ListarSomenteExibe(Guid IdEvento);

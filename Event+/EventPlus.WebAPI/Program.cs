@@ -1,3 +1,4 @@
+using Azure.AI.ContentSafety;
 using EventPlus.WebAPI.BdContextEvent;
 using EventPlus.WebAPI.Interface;
 using EventPlus.WebAPI.Repositories;
@@ -16,6 +17,14 @@ builder.Services.AddScoped<ITipoUsuarioRepository, TipoUsuarioRepository>();
 builder.Services.AddScoped<IInstituicaoRepository, InstituicaoRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IEventoRepository, EventoRepository>();
+builder.Services.AddScoped<IPresencaRepository, PresencaRepository>();
+
+//Configuração do Azure Content Safety
+var endpoint = "https://moderatorservice-rafa.cognitiveservices.azure.com/      ";
+var apiKey = "";
+
+var client = new ContentSafetyClient(new Uri(endpoint), new Azure.AzureKeyCredential(apiKey));
+builder.Services.AddSingleton(client);
 
 // Adiciona Swagger
 builder.Services.AddEndpointsApiExplorer();
