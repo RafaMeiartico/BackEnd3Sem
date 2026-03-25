@@ -1,9 +1,10 @@
 ﻿using EventPlus.WebAPI.BdContextEvent;
+using EventPlus.WebAPI.Interface;
 using EventPlus.WebAPI.Models;
 
 namespace EventPlus.WebAPI.Repositories;
 
-public class ComentarioEventoRepository
+public class ComentarioEventoRepository : IComentarioEventoRepository
 {
     private readonly EventContext _Context;
     public ComentarioEventoRepository(EventContext context)
@@ -56,5 +57,10 @@ public class ComentarioEventoRepository
             .Where(c => c.IdEvento == IdEvento && c.Exibe)
             .OrderByDescending(c => c.DataComentarioEvento)
             .ToList();
+    }
+
+    public ComentarioEvento BuscarPorIdUsuario(Guid IdUsuario, Guid IdEvento)
+    {
+        throw new NotImplementedException();
     }
 }

@@ -18,9 +18,10 @@ builder.Services.AddScoped<IInstituicaoRepository, InstituicaoRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IEventoRepository, EventoRepository>();
 builder.Services.AddScoped<IPresencaRepository, PresencaRepository>();
+builder.Services.AddScoped<IComentarioEventoRepository, ComentarioEventoRepository>();
 
 //Configuração do Azure Content Safety
-var endpoint = "https://moderatorservice-rafa.cognitiveservices.azure.com/      ";
+var endpoint = "https://moderatorservice-rafa.cognitiveservices.azure.com/";
 var apiKey = "";
 
 var client = new ContentSafetyClient(new Uri(endpoint), new Azure.AzureKeyCredential(apiKey));

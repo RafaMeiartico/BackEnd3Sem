@@ -44,6 +44,104 @@
             "description": "OK"
           }
         }
+      },
+      "get": {
+        "tags": [
+          "ComentarioEvento"
+        ],
+        "parameters": [
+          {
+            "name": "IdEvento",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ComentarioEvento/{idUsuario}/{idEvento}": {
+      "get": {
+        "tags": [
+          "ComentarioEvento"
+        ],
+        "parameters": [
+          {
+            "name": "idUsuario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "idEvento",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ComentarioEvento/{IdEvento}": {
+      "get": {
+        "tags": [
+          "ComentarioEvento"
+        ],
+        "parameters": [
+          {
+            "name": "IdEvento",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ComentarioEvento/{id}": {
+      "delete": {
+        "tags": [
+          "ComentarioEvento"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/api/Evento/Usuario/{idUsuario}": {
