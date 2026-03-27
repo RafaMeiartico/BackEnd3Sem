@@ -16,6 +16,6 @@ public partial class TipoContato
     [StringLength(50)]
     public string Titulo { get; set; } = null!;
 
-    [InverseProperty("IdTipoUsuarioNavigation")]
+    [InverseProperty("IdTipoContatoNavigation")]
     public virtual ICollection<Contato> Contatos { get; set; } = new List<Contato>();
 }

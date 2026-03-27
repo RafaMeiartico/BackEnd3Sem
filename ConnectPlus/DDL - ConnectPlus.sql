@@ -1,7 +1,7 @@
-CREATE DATABASE "BDConnect+";
+CREATE DATABASE BDConnectPlus;
 GO
 
-USE "BDConnect+";
+USE BDConnectPlus;
 
 CREATE TABLE TipoContato(
 	idTipoContato  UNIQUEIDENTIFIER PRIMARY KEY DEFAULT ((NEWID())),
@@ -18,8 +18,9 @@ CREATE TABLE Contato(
 	Titulo NVARCHAR(100) NOT NULL,
 	FormaContato NVARCHAR(100) NOT NULL,
 	Imagem VARCHAR(100) NOT NULL,
-	IdTipoUsuario UNIQUEIDENTIFIER FOREIGN KEY REFERENCES TipoContato(IdTipoContato)
+	IdTipoContato UNIQUEIDENTIFIER FOREIGN KEY REFERENCES TipoContato(IdTipoContato)
 );
+
 
 GO
 

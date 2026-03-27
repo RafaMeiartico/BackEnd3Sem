@@ -7,7 +7,7 @@ namespace ConnectPlus.Repositories;
 public class TipoContatoRepository : ITipoContatoRepository
 {
     private readonly ConnectPlusContext _context;
-
+    
     public TipoContatoRepository(ConnectPlusContext context)
     {
         _context = context;
@@ -22,9 +22,8 @@ public class TipoContatoRepository : ITipoContatoRepository
         if (TipoContato != null)
         {
             tipoContato.Titulo = tipoContato.Titulo;
-
-            _context.SaveChanges();
         }
+        _context.SaveChanges();
     }
 
 

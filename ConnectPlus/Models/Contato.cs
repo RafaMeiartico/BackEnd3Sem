@@ -23,9 +23,9 @@ public partial class Contato
     [Unicode(false)]
     public string Imagem { get; set; } = null!;
 
-    public Guid? IdTipoUsuario { get; set; }
+    public Guid? IdTipoContato { get; set; }
 
-    [ForeignKey("IdTipoUsuario")]
+    [ForeignKey("IdTipoContato")]
     [InverseProperty("Contatos")]
-    public virtual TipoContato? IdTipoUsuarioNavigation { get; set; }
+    public virtual TipoContato? IdTipoContatoNavigation { get; set; }
 }

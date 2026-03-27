@@ -1,7 +1,8 @@
-﻿using ConnectPlus.Interface; 
-using ConnectPlus.Models;    
+﻿using ConnectPlus.Models;    
 using Microsoft.AspNetCore.Http;
 using ConnectPlus.BDConnectPlus;
+using ConnectPlus.Interface;
+using System.Net.Http.Headers;
 
 namespace ConnectPlus.Repositories;
 
@@ -23,7 +24,7 @@ public class ContatoRepository : IContatoRepository
 
         if (Contato != null)
         {
-            Contato.FormaContato = contato.FormaContato;
+            Contato.IdTipoContato = contato.IdTipoContato;
             Contato.Titulo = contato.Titulo;
             Contato.Imagem = contato.Imagem;
             _context.SaveChanges();
@@ -54,6 +55,8 @@ public class ContatoRepository : IContatoRepository
     {
         try
         {
+            contato.FormaContato = contato.FormaContato;
+            contato.IdTipoContato = contato.IdTipoContato;
             contato.IdContato = Guid.NewGuid();
 
             _context.Contatos.Add(contato);
@@ -72,7 +75,7 @@ public class ContatoRepository : IContatoRepository
     {
         try
         {
-            Contato contato = _context.Contatos.Find(id.ToString())!;
+            Contato contato = _context.Contatos.Find(id)!;
 
             if (contato != null)
             {

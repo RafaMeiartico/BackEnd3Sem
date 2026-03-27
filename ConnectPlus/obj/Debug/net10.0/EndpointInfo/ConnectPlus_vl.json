@@ -49,6 +49,10 @@
                   "Imagem": {
                     "type": "string",
                     "format": "binary"
+                  },
+                  "IdTipoContato": {
+                    "type": "string",
+                    "format": "uuid"
                   }
                 }
               },
@@ -60,6 +64,9 @@
                   "style": "form"
                 },
                 "Imagem": {
+                  "style": "form"
+                },
+                "IdTipoContato": {
                   "style": "form"
                 }
               }
@@ -310,12 +317,12 @@
             "type": "string",
             "nullable": true
           },
-          "idTipoUsuario": {
+          "idTipoContato": {
             "type": "string",
             "format": "uuid",
             "nullable": true
           },
-          "idTipoUsuarioNavigation": {
+          "idTipoContatoNavigation": {
             "$ref": "#/components/schemas/TipoContato"
           }
         },

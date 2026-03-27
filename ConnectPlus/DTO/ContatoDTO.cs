@@ -10,4 +10,5 @@ public class ContatoDTO
     [Required(ErrorMessage = "A forma de contato é obrigatória")]
     public string? FormaContato { get; set; }
     public IFormFile? Imagem { get; set; }
+    public Guid IdTipoContato { get; set; }
 }

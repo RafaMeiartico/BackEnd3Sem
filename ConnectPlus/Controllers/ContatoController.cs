@@ -88,7 +88,7 @@ public class ContatoController : ControllerBase
 
         contato.Titulo = novoContato.Titulo!;
         contato.FormaContato = novoContato.FormaContato!;
-
+        contato.IdTipoContato = novoContato.IdTipoContato;
 
         try
         {

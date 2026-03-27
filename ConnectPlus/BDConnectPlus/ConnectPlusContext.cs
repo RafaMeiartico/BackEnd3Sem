@@ -32,7 +32,7 @@ public partial class ConnectPlusContext : DbContext
 
             entity.Property(e => e.IdContato).HasDefaultValueSql("(newid())");
 
-            entity.HasOne(d => d.IdTipoUsuarioNavigation).WithMany(p => p.Contatos).HasConstraintName("FK__Contato__IdTipoU__60A75C0F");
+            entity.HasOne(d => d.IdTipoContatoNavigation).WithMany(p => p.Contatos).HasConstraintName("FK__Contato__IdTipoU__60A75C0F");
         });
 
         modelBuilder.Entity<TipoContato>(entity =>
